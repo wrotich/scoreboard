@@ -3,28 +3,27 @@ import PropTypes from 'prop-types';
 import Counter from './Counter';
 import Icon from './Icon';
 
-
 class Player extends PureComponent {
 
   static propTypes = {
-    changeScore: PropTypes.func,
-    removePlayer: PropTypes.func,
+    removePlayer: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     score: PropTypes.number.isRequired,
-    id: PropTypes.number,
-    index: PropTypes.number,
+    id: PropTypes.number.isRequired,
+    index: PropTypes.number.isRequired,
     isHighScore: PropTypes.bool
   };
 
   render() {
+
     const {
       name,
       id,
       score,
       index,
-      removePlayer,
-      changeScore
+      removePlayer
     } = this.props;
+
     return (
       <div className="player">
         <span className="player-name">
@@ -33,9 +32,10 @@ class Player extends PureComponent {
           { name }
         </span>
 
-        <Counter score={score}
-        index={index}
-        changeScore={changeScore} />
+        <Counter
+          score={score}
+          index={index}
+        />
       </div>
     );
   }
