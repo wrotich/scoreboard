@@ -2,7 +2,7 @@
 A simple React application
 
 ## Requirements
-- For development, you will only need Node.js installed on your environement.
+- For development, you will only need Node.js installed on your environment.
 Node
 - You should be able to run the following command after the installation procedure below.
 
